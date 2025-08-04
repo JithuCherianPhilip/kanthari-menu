@@ -1,230 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Kanthari</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 2rem;
-            background-color: #fffaf5;
-        }
-        .hero p{
-            height: 40vh;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 90px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Kanthari</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --accent: #d74d26;
+      --muted: #aaaaaa;
+      --border: #333333;
+    }
 
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h1 {
-            font-size: 1.8rem;
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 0.5rem;
-        }
-        .dish {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px dashed #ddd;
-        }
-        .dish p {
-            margin: 0;
-        }
-        .price {
-            font-weight: bold;
-        }
-    </style>
+    body.light {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --accent: #d74d26;
+      --muted: #777;
+      --border: #e5e5e5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem 1rem;
+      max-width: 700px;
+      margin-inline: auto;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .hero {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .menu-heading {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: var(--muted);
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .toggle-container button {
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent);
+    }
+
+    .dish {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 0.95rem;
+    }
+
+    .dish p {
+      margin: 0;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .price {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .footnote {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    .insta-link {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .insta-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <section class="hero">
-            <p>Kanthari</p>
-        </section>
-        <section>
-            <h1>Healthy Diets</h1>
-            <div class="dish"><p>Garden Fresh Green Salad</p><p class="price">₹125</p></div>
-            <div class="dish"><p>Chef Special Veg Salad</p><p class="price">₹139</p></div>
-            <div class="dish"><p>Chef Special Chicken Salad</p><p class="price">₹179</p></div>
-            <div class="dish"><p>Curd</p><p class="price">₹25</p></div>
-        </section>
-        <section>
-            <h1>FROM THE HOT TUREEN</h1>
-            <div class="dish"><p>Sweet Corn Soup (Veg/Chicken)</p><p class="price">₹125/₹139</p></div>
-            <div class="dish"><p>Hot & Sour Soup (Veg/Chicken)</p><p class="price">₹125/₹139</p></div>
-            <div class="dish"><p>Naadan Jeera Kozhi Soup</p><p class="price">₹149</p></div>
-        </section>
-        <section>
-            <h1>Kick Start Of Your Meal</h1>
-            <div class="dish"><p>French Fries</p><p class="price">₹135</p></div>
-            <div class="dish"><p>Crispy Fried Vegetable</p><p class="price">₹179</p></div>
-            <div class="dish"><p>Honey Glazed Potato</p><p class="price">₹179</p></div>
-            <div class="dish"><p>Chicken Kondattam</p><p class="price">₹285</p></div>
-            <div class="dish"><p>Chicken Fry</p><p class="price">₹269</p></div>
-            <div class="dish"><p>Dragon Chicken</p><p class="price">₹285</p></div>
-            <div class="dish"><p>Chicken 65</p><p class="price">₹259</p></div>
-            <div class="dish"><p>Honey Thai Wings</p><p class="price">₹289</p></div>
-            <div class="dish"><p>Chicken Tikka</p><p class="price">₹305</p></div>
-            <div class="dish"><p>Hariyali Tikka</p><p class="price">₹309</p></div>
-            <div class="dish"><p>Malayi Tikka</p><p class="price">₹309</p></div>
-            <div class="dish"><p>Chicken Lollipop</p><p class="price">₹259</p></div>
-            <div class="dish"><p>Spicy Chicken Poppy</p><p class="price">₹265</p></div>
-            <div class="dish"><p>Fish Finger With Fries</p><p class="price">₹275</p></div>
+  <main>
+    <div class="hero">Kanthari</div>
+    <div class="menu-heading">Our Menu</div>
 
-            <p style="font-style: italic; font-size: 0.9em;">*Taxes Are Applicable</p>
-        </section>
-        <section>
-            <h1>Chef Touch</h1>
-            <div class="dish"><p>Kuttanadan Chopsuey</p><p class="price">₹255</p></div>
-            <div class="dish"><p>Kothu Paratha Chicken</p><p class="price">₹259</p></div>
-            <div class="dish"><p>Kothu Paratha Beef</p><p class="price">₹269</p></div>
-            <div class="dish"><p>Paal Kappa Fish Curry</p><p class="price">₹255</p></div>
-            <div class="dish"><p>Paal Kappa Beef Curry</p><p class="price">₹269</p></div>
-            <div class="dish"><p>Puttu Nirachathu Chicken</p><p class="price">₹259</p></div>
-            <div class="dish"><p>Puttu Nirachathu Beef</p><p class="price">₹269</p></div>
-            <div class="dish"><p>Beef Paratha Pollichathu</p><p class="price">₹249</p></div>
-            <div class="dish"><p>Chicken Paratha Pollichathu</p><p class="price">₹239</p></div>
-            <div class="dish"><p>Nool Puttu Biryani Chicken</p><p class="price">₹259</p></div>
-            <div class="dish"><p>Nool Puttu Biryani Beef</p><p class="price">₹265</p></div>
-            <div class="dish"><p>Kappa Vevichathu</p><p class="price">₹115</p></div>
+    <div class="toggle-container">
+      <button onclick="toggleMode()">Switch Mode</button>
+    </div>
 
-            <p style="font-style: italic; font-size: 0.9em;">*Taxes Are Applicable</p>
-        </section>
-        <section>
-            <h1>Vegetable Delights</h1>
-            <div class="dish"><p>Naadan Vegetable Curry</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Malabar Vegetable Curry</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Chettinad Veg Curry</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Veg Perlan</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Veg Stew</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Veg Korma</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Kadai Vegetable</p><p class="price">₹169</p></div>
-            <div class="dish"><p>Mushroom Masala</p><p class="price">₹179</p></div>
-            <div class="dish"><p>Chilly Mushroom (Dry/Gravy)</p><p class="price">₹185</p></div>
-            <div class="dish"><p>Kadai Mushroom</p><p class="price">₹185</p></div>
-            <div class="dish"><p>Paneer Butter Masala</p><p class="price">₹219</p></div>
-            <div class="dish"><p>Kadai Paneer</p><p class="price">₹219</p></div>
-            <div class="dish"><p>Paneer Manchurian (Dry/Gravy)</p><p class="price">₹219</p></div>
-            <div class="dish"><p>Chilly Paneer (Dry/Gravy)</p><p class="price">₹219</p></div>
-            <div class="dish"><p>Chilly Gobi (Dry/Gravy)</p><p class="price">₹219</p></div>
-            <div class="dish"><p>Gobi Manchurian (Dry/Gravy)</p><p class="price">₹219</p></div>
-        </section>
+    <section>
+      <h1>Healthy Diets</h1>
+      <div class="dish"><p>Garden Fresh Green Salad</p><p class="price">₹125</p></div>
+      <div class="dish"><p>Chef Special Veg Salad</p><p class="price">₹139</p></div>
+      <div class="dish"><p>Chef Special Chicken Salad</p><p class="price">₹179</p></div>
+      <div class="dish"><p>Curd</p><p class="price">₹25</p></div>
+    </section>
 
-        <section>
-            <h1>Egg</h1>
-            <div class="dish"><p>Omelette (Single/Double)</p><p class="price">₹40 / ₹80</p></div>
-            <div class="dish"><p>Masala Omelette (Single/Double)</p><p class="price">₹50 / ₹100</p></div>
-            <div class="dish"><p>Bullseye (Single/Double)</p><p class="price">₹40 / ₹80</p></div>
-            <div class="dish"><p>Egg Burji</p><p class="price">₹80</p></div>
+    <section>
+      <h1>From the Hot Tureen</h1>
+      <div class="dish"><p>Sweet Corn Soup (Veg/Chicken)</p><p class="price">₹125/₹139</p></div>
+      <div class="dish"><p>Hot & Sour Soup (Veg/Chicken)</p><p class="price">₹125/₹139</p></div>
+      <div class="dish"><p>Naadan Jeera Kozhi Soup</p><p class="price">₹149</p></div>
+    </section>
 
-            <p style="font-style: italic; font-size: 0.9em;">*Taxes Are Applicable</p>
-        </section>
-        <section>
-  <h1>Chicken</h1>
-  <div class="dish">
-    <p>Malabar Chicken Roast</p><p class="price">Large ₹265 / Medium ₹169</p>
-  </div>
-  <div class="dish">
-    <p>Naadan Chicken Curry</p><p class="price">Large ₹265 / Medium ₹169</p>
-  </div>
-  <div class="dish">
-    <p>Chicken Mappas</p><p class="price">Large ₹279 / Medium ₹179</p>
-  </div>
-  <div class="dish">
-    <p>Chicken Stew</p><p class="price">Large ₹279 / Medium ₹179</p>
-  </div>
-  <div class="dish">
-    <p>Chettinad Chicken</p><p class="price">Large ₹279 / Medium ₹179</p>
-  </div>
-  <div class="dish">
-    <p>Kadai Chicken</p><p class="price">Large ₹279 / Medium ₹179</p>
-  </div>
-  <div class="dish">
-    <p>Butter Chicken</p><p class="price">₹279</p>
-  </div>
-  <div class="dish">
-    <p>Chicken Tikka Masala</p><p class="price">₹299</p>
-  </div>
-  <div class="dish">
-    <p>Thandoori Chicken (Quarter/Half/Full)</p>
-    <p class="price">₹179 / ₹349 / ₹699</p>
-  </div>
-  <div class="dish">
-    <p>Chilly Chicken (Dry/Gravy)</p><p class="price">₹259</p>
-  </div>
-  <div class="dish">
-    <p>Ginger Chicken (Dry/Gravy)</p><p class="price">₹265</p>
-  </div>
-  <div class="dish">
-    <p>Garlic Chicken (Dry/Gravy)</p><p class="price">₹265</p>
-  </div>
-  <div class="dish">
-    <p>Schezwan Chicken (Dry/Gravy)</p><p class="price">₹275</p>
-  </div>
-  <div class="dish">
-    <p>Chicken Manchurian (Dry/Gravy)</p><p class="price">₹265</p>
-  </div>
-</section>
+    <section>
+      <h1>Rice & Noodles</h1>
+      <div class="dish"><p>Steamed Rice</p><p class="price">₹60</p></div>
+      <div class="dish"><p>Neychoru</p><p class="price">₹70</p></div>
+      <div class="dish"><p>Veg Fried Rice</p><p class="price">₹110</p></div>
+      <div class="dish"><p>Egg Fried Rice</p><p class="price">₹120</p></div>
+      <div class="dish"><p>Chicken Fried Rice</p><p class="price">₹140</p></div>
+      <div class="dish"><p>Mixed Fried Rice</p><p class="price">₹160</p></div>
+    </section>
 
-<section>
-  <h1>Beef</h1>
-  <div class="dish">
-    <p>Naadan Beef Curry</p><p class="price">Large ₹259 / Medium ₹185</p>
-  </div>
-  <div class="dish">
-    <p>Beef Stew</p><p class="price">Large ₹269 / Medium ₹189</p>
-  </div>
-  <div class="dish">
-    <p>Beef Roast</p><p class="price">₹239</p>
-  </div>
-  <div class="dish">
-    <p>Pothu Thenga Fry</p><p class="price">₹249</p>
-  </div>
-  <div class="dish">
-    <p>Pothu Shaap Roast</p><p class="price">₹249</p>
-  </div>
-  <div class="dish">
-    <p>Beef Ularthu</p><p class="price">₹249</p>
-  </div>
-  <div class="dish">
-    <p>Chilly Beef (Dry/Gravy)</p><p class="price">₹269</p>
-  </div>
-  <div class="dish">
-    <p>Schezwan Beef (Dry/Gravy)</p><p class="price">₹279</p>
-  </div>
-</section>
+    <section>
+      <h1>Schezwan Specials</h1>
+      <div class="dish"><p>Schezwan Veg Fried Rice</p><p class="price">₹125</p></div>
+      <div class="dish"><p>Schezwan Egg Fried Rice</p><p class="price">₹135</p></div>
+      <div class="dish"><p>Schezwan Chicken Fried Rice</p><p class="price">₹155</p></div>
+      <div class="dish"><p>Schezwan Mixed Fried Rice</p><p class="price">₹175</p></div>
+    </section>
 
-<section>
-  <h1>Fisherman’s Wharf</h1>
-  <div class="dish">
-    <p>Kozhuva Fry <span class="note">(Deep Fry)</span></p><p class="price">₹119</p>
-  </div>
-  <div class="dish">
-    <p>Thala Curry</p><p class="price">As per size</p>
-  </div>
-  <div class="dish">
-    <p>Kera Mulakittathu</p><p class="price">₹179</p>
-  </div>
-  <div class="dish">
-    <p>Motha Mango Chatty Curry</p><p class="price">As per size</p>
-  </div>
-  <div class="dish">
-    <p>Fish Mango Chatty Curry <span class="note">(Neymeen, Karimeen)</span></p><p class="price">As per size</p>
-  </div>
-  <div class="dish">
-    <p>Fish Tawa Fry <span class="note">(Neymeen, Motha, Karimeen, Prawns, Ayala, Mathi)</span></p><p class="price">As per size</p>
-  </div>
-</section>
+    <section>
+      <h1>Noodles</h1>
+      <div class="dish"><p>Veg Noodles</p><p class="price">₹110</p></div>
+      <div class="dish"><p>Egg Noodles</p><p class="price">₹120</p></div>
+      <div class="dish"><p>Chicken Noodles</p><p class="price">₹140</p></div>
+      <div class="dish"><p>Mixed Noodles</p><p class="price">₹160</p></div>
+    </section>
 
+    <section>
+      <h1>Schezwan Noodles</h1>
+      <div class="dish"><p>Schezwan Veg Noodles</p><p class="price">₹125</p></div>
+      <div class="dish"><p>Schezwan Egg Noodles</p><p class="price">₹135</p></div>
+      <div class="dish"><p>Schezwan Chicken Noodles</p><p class="price">₹155</p></div>
+    </section>
 
+    <p class="footnote">*Taxes Are Applicable</p>
 
+    <div class="insta-link">
+      Follow us on <a href="https://instagram.com/taste_of_kanthari" target="_blank">@taste_of_kanthari</a>
+    </div>
+  </main>
 
-    </main>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
+    }
+  </script>
 </body>
 </html>
